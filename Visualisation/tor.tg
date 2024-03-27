@@ -9,10 +9,9 @@
 
 :volu target TORUS 0 10 50.7 0 360 G4_W
 :color target 0.2 0.3 0.5 
+// Dimensions: r = 1cm, R = ~5.07cm
 
 :rotm r000 0 0 0
-// The source is placed in vacuum.
-// Give vacuum a copy number >0 !=1 to 
-// record information of the primary particle
+// The source is placed in vacuum with the vacuum placed inside the world volume.
 :place vacuum 2 world r000 0 0 0
 :place target 1 vacuum r000 0 0 0
