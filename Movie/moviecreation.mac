@@ -1,0 +1,70 @@
+# geometry 
+/geometry/source ... geometry.tg
+
+# add physics lists 
+/physics_lists/select QGSP_BERT_HP_EMV
+
+# initialize geometry and physics
+/run/initialize
+
+# protons from a synchotron
+/gps/particle proton
+/gps/energy 4 GeV
+/gps/position -75 0 0 mm
+/gps/direction 1 0 0
+
+# visualize geometry and events for debugging
+/vis/geometry/list
+/vis/open OGL
+/vis/drawVolume
+/vis/viewer/set/style wireframe
+/vis/viewer/set/background white ! ! 0
+/vis/viewer/set/lineSegmentsPerCircle 50
+/vis/viewer/set/viewpointThetaPhi 35 55
+/vis/viewer/set/lightsMove cam
+/vis/viewer/flush
+/vis/viewer/set/autoRefresh false
+/vis/drawVolume
+/vis/scene/add/trajectories rich
+/vis/scene/add/hits
+
+# make a particle filter
+/vis/filtering/trajectories/create/particleFilter
+/vis/filtering/trajectories/particleFilter-0/add proton
+/vis/filtering/trajectories/particleFilter-0/add neutron
+
+# draw trajectories - time slice for frame generation added as well
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByParticleID-0/default/setTimeSliceInterval 0.01 ns
+/vis/modeling/trajectories/drawByParticleID-0/set proton magenta
+/vis/modeling/trajectories/drawByParticleID-0/set neutron green
+
+# Timer for movie
+/vis/viewer/set/timeWindow/displayLightFront true 0 0 -20 cm -0.01 ns
+/vis/viewer/set/timeWindow/displayHeadTime true
+/vis/viewer/set/timeWindow/fadeFactor 1
+
+/vis/scene/endOfEventAction accumulate 15
+
+# turn on detailed information about tracking
+/tracking/verbose 2
+
+# run a few events to start movie
+/run/beamOn 5
+
+# Export Movie format
+/vis/ogl/set/exportFormat jpg
+
+# Step through times
+/vis/viewer/set/timeWindow/startTime 0 ns .1 ns
+/vis/viewer/save
+/vis/viewer/set/timeWindow/startTime 0.5 ns .1 ns
+/vis/viewer/save
+/vis/viewer/set/timeWindow/startTime 1 ns .1 ns
+/vis/viewer/save
+/vis/viewer/set/timeWindow/startTime 1.5 ns .1 ns
+/vis/viewer/save
+/vis/viewer/set/timeWindow/startTime 2 ns .1 ns
+/vis/viewer/save
+/vis/viewer/interpolate ! ! ! ! export
