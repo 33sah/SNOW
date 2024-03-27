@@ -1,5 +1,5 @@
 // default unit for length is mm 
-// Volume constraint is 100cm^2
+// Volume constraint is 100cm^3
 
 :volu world BOX 100 100 100 G4_AIR
 :vis world OFF
