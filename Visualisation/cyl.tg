@@ -1,4 +1,6 @@
-// default unit for length is mm
+// default unit for length is mm 
+// Volume constraint is 100cm^2
+
 :volu world BOX 100 100 100 G4_AIR
 :vis world OFF
 
@@ -7,10 +9,9 @@
 
 :volu target TUBE 0 25.15 25.16 G4_W
 :color target 0.2 0.3 0.5
+// Dimensions: r = ~2.515cm and h = ~5.032cm
 
 :rotm r000 0 0 0
-// The source is placed in vacuum.
-// Give vacuum a copy number >0 !=1 to 
-// record information of the primary particle
+// The source is placed in vacuum with the vacuum placed in the world volume
 :place vacuum 2 world r000 0 0 0
 :place target 1 vacuum r000 0 0 0
