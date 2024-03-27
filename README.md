@@ -11,3 +11,4 @@ Gears: https://github.com/jintonic/gears
 
 Dr Liu: https://www.youtube.com/channel/UCQd4wp1ehUPXVHLjqYAMR3g
 
+Main Contributors: A.V, E.K
