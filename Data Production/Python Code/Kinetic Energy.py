@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import seaborn as sea
 import awkward as ak
 import pandas as pd
-import mpld3
 
 #indexing
 def seq(start, end, step):
