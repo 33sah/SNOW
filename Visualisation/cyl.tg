@@ -1,4 +1,4 @@
-// default unit for length is mm 
+// default unit for length is mm - put to 2 d.p
 // Volume constraint is 100cm^3
 
 :volu world BOX 100 100 100 G4_AIR
