@@ -1,0 +1,27 @@
+# print macro commands on screen
+/control/verbose 2
+/control/saveHistory
+
+# geometry 
+/geometry/source ... geometry.tg
+
+# add physics lists 
+/physics_lists/select QGSP_BERT_HP_EMV
+
+# initialize geometry and physics
+/run/initialize
+
+# protons from a synchotron
+/gps/particle proton
+/gps/energy 4.9 GeV
+/gps/position -75 0 0 mm
+/gps/direction 1 0 0
+
+# turn off screen printing for fast simulation 
+/tracking/verbose 0
+
+# turn on data recording
+/analysis/setFileName results.root
+
+# start simulation
+/run/beamOn 1000
