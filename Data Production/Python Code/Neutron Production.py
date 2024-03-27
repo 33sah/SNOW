@@ -47,7 +47,7 @@ def log_f(x,a,b):
 def fitLog(x, y):
     param, param_cov = curve_fit(log_f,x,y)
     print("Log Coefficients")
-    print(param)
+    print(param) #a and b parameters can be read from here.
     answer = log_f(x, param[0], param[1])
     return answer
 
