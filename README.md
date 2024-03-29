@@ -15,9 +15,11 @@ Many thanks to Dr Liu both for producing Gears, as well as for being willing to 
   
 - [Data Production](https://github.com/33sah/SNOW/tree/main/Data%20Production): Python code to automate production of [ROOT](https://root.cern/) data files as well as raw Geant4 calculations.
   
-- [Data Analysis](https://github.com/33sah/SNOW/tree/main/Data%20Analysis): Python - [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/) and [Uproot](https://uproot.readthedocs.io/) modules primarily used
+- [Data Analysis](https://github.com/33sah/SNOW/tree/main/Data%20Analysis): Python - [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/) and [Uproot](https://uproot.readthedocs.io/) modules primarily used.
+    ![Lego Theorem](https://github.com/33sah/SNOW/assets/107648256/ff24718e-4ef4-49ce-aed4-c73d2ee2ab74)[^2]
 
-Main Contributors: A.V, E.K[^2]
+Main Contributors: A.V, E.K[^3]
 
 [^1]: Proton Path = Magenta, Neutron Path = Green
-[^2]: Other Team Members Directly Referenced in Our Paper
+[^2]: "Lego Theorem" - A.V
+[^3]: Other Team Members Directly Referenced in Our Paper
