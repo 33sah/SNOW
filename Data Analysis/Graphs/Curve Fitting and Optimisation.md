@@ -44,6 +44,7 @@ $$ {dN \over N} \div {dPE \over PE} $$
 
 Simplifying:
 
+$$ {dN \over dPE} {PE \over N} $$
 
 
 
