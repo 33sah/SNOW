@@ -1,6 +1,6 @@
 ## Curve Fitting
 
-For both graphs, a logarithmic model $f(x) = a + b*log(x)$ was used as a starting point to fit the data. 
+For both graphs, a logarithmic model $f(x) = a +\hspace 1cm$ $b$ $log(x)$ was used as a starting point to fit the data. 
 
 A logarithmic relationship seemed fitting from the shape of our raw data. This relationship was also suggested by previous research regarding Spallation. [^1]
 
@@ -46,8 +46,22 @@ Simplifying:
 
 $$ {dN \over dPE} {PE \over N} $$
 
+As we can express N in terms of $a +\hspace 1cm$ $b$ $log(x)$:
 
+$$ {dN \over dPE} {PE \over a + b*log(PE)} = 1 $$
 
+Which we can easily solve for. 
 
+For example, if $N = ln(PE)$:
+
+$$ {1 \over PE} {PE \over ln(Pe)} = 1 $$
+
+$$ {1 \over ln(PE)} = 1 $$
+
+$$ ln(PE) = 1 $$
+
+$$ PE = e $$
+
+So the optimum Neutron Yield in this case would be where Proton Energy is $e$.
 
 [^1]: [Neutron Production from Spallation Reactions: Jaegwon Yoo, October 1998](https://www.kns.org/files/pre_paper/30/98A-026.PDF) 
