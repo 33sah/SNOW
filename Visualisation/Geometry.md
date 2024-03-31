@@ -34,7 +34,7 @@ Plugging into Desmos yields:
 
 So to maximise surface area we can either increase r until $r = {\sqrt {100 \over 2\pi}}$ or decrease r indefinitely.
 
-However as we wish for the proton's trajectory through the volume to be maximised, and we will be firing through the $x$ $or$ $z$ $axis$, we wish to maximise r, so $r = {\sqrt {100 \over 2\pi}} = 3.989$ $cm$ and $A = 150.133$ $cm^2$
+However as we wish for the proton's trajectory through the volume to be maximised, and we will be firing through the $x$ $or$ $z$ $axis$, we wish to maximise r, so $r = {\sqrt {100 \over 2\pi}} = 3.989$ $cm$, $h = 2$ $cm$ and $A = 150.133$ $cm^2$
 
 
 ### Sphere
