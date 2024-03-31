@@ -7,7 +7,7 @@
 :volu vacuum BOX 80 80 80 G4_Galactic
 :vis vacuum OFF
 
-:volu target TUBE 0 39.89 20 G4_W
+:volu target TUBE 0 39.89 10 G4_W
 :color target 0.2 0.3 0.5
 // Dimensions: r = ~3.989 cm and h = 2cm
 
