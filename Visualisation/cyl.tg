@@ -7,9 +7,9 @@
 :volu vacuum BOX 80 80 80 G4_Galactic
 :vis vacuum OFF
 
-:volu target TUBE 0 25.15 25.16 G4_W
+:volu target TUBE 0 39.89 20 G4_W
 :color target 0.2 0.3 0.5
-// Dimensions: r = ~2.515cm and h = ~5.032cm
+// Dimensions: r = ~3.989 cm and h = 2cm
 
 :rotm r000 0 0 0
 // The source is placed in vacuum with the vacuum placed in the world volume
