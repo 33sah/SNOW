@@ -20,7 +20,10 @@ def texteditor(shape, Energy, linenumbers):
         lines[linenumbers[0]] = f"/geometry/source {shape}.tg"
         lines[linenumbers[1]] = f"/gps/energy {Energy} GeV"
         FileEnergy = str(Energy).replace(".","_")
-        lines[linenumbers[2]] = f"/analysis/setFileName results{FileEnergy}{shape}.root"
+        # Defining standard deviation of gaussian energy, +/- 1% are roughly bounds so dividing by 3 (99.7% of points in range) gives us the value of sigma to 3 d.p
+        Sigma = round(((Energy * 0.01)/3),3)
+        lines[linenumbers[2]] = f"/gps/ene/sigma {Sigma} GeV"
+        lines[linenumbers[3]] = f"/analysis/setFileName results{FileEnergy}{shape}.root"
         final_text = "\n".join(lines)
     
         with open("run.mac", "w") as file:
@@ -33,8 +36,8 @@ def main():
   # Run run.mac with gears
   command = "gears.exe run.mac"
 
-  # Line Numbers to change - Geometry, Energy and Data - Remember these will be 1 smaller than actuality due to Python list starting at index = 0
-  Numbers = [5,15,26]
+  # Line Numbers to change - Geometry, Energy Range + Distribution and Data - Remember these will be 1 smaller than actuality due to Python list starting at index = 0
+  Numbers = [5,34,35,41]
   
   for shape in shapes:
       for x in seq(0.1,5.1,0.1):
