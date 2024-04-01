@@ -13,9 +13,27 @@
 
 # protons from a synchotron
 /gps/particle proton
-/gps/energy 4.9 GeV
-/gps/position -75 0 0 mm
-/gps/direction 1 0 0
+/gps/pos/type Beam
+
+# the incident surface is in the y-z plane
+/gps/pos/rot1 0 1 0
+/gps/pos/rot2 0 0 1
+
+# the beam spot is centered at the origin, 10 mm radius spot size, collimated beam so all incident at the same angle
+/gps/pos/shape Circle
+/gps/pos/centre -75 0 0 mm
+/gps/pos/radius 10 mm
+/gps/pos/sigma_r 0 mm
+
+# the beam is travelling along the x-axis 
+/gps/ang/rot1 0 0 1
+/gps/ang/rot2 0 1 0
+/gps/ang/type beam1d
+
+# Assuming +/- 1% proton energy following gaussian distribution - 3 sigma gives 99.7% of range
+/gps/ene/type Gauss
+/gps/ene/mono 5 GeV
+/gps/ene/sigma 0.017 GeV
 
 # turn off screen printing for fast simulation 
 /tracking/verbose 0
