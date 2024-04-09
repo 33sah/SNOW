@@ -6,7 +6,7 @@ A logarithmic relationship seemed fitting from the shape of our raw data. This r
 
 As for the process of curve fitting itself, `Scipy.optimise.curveFit` was used to determine parameters $a,b$. 
 
-## Optimisation 
+## Proportional Optimisation 
 
 This uses the concept of elasticity to maximise neutron production. 
 
