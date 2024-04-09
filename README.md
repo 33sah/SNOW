@@ -2,6 +2,8 @@
 Full Code for the [Beamline for Schools Challenge](https://beamlineforschools.cern/ )
 Team SNOW - Spallation Neutron Optimisation, Tungsten
 
+![SNOW logo](https://github.com/33sah/SNOW/assets/107648256/404b564e-0c2a-41ba-ad56-357f8aa125a6)
+
 [Geant4](https://geant4.web.cern.ch/) was run via the [Gears](https://github.com/jintonic/gears) module, produced by [Dr Jing Liu](https://www.youtube.com/channel/UCQd4wp1ehUPXVHLjqYAMR3g) of the University of South Dakota. 
 Many thanks to Dr Liu both for producing Gears, as well as for being willing to help us get started with Geant4.
   
